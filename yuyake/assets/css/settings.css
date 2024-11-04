@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+/**************************************************************
+The new CSS reset - version 1.5.1 (last updated 1.3.2022)
+GitHub page: https://github.com/elad2412/the-new-css-reset
+//MEMO customised 
+added html,body{width:100%;height:100%}
+added img{max-width:100%;height:auto}
+**************************************************************/
+*:where(:not(iframe,canvas,img,svg,video):not(svg *,symbol *)){all:unset;display:revert}*,*::after,*::before{box-sizing:border-box}a,button{cursor:revert}menu,ol,ul{list-style:none}table{border-collapse:collapse}textarea{white-space:revert}meter{-webkit-appearance:revert;appearance:revert}::placeholder{color:unset}:where([hidden]){display:none}:where([contenteditable]){-moz-user-modify:read-write;-webkit-user-modify:read-write;overflow-wrap:break-word;-webkit-line-break:after-white-space;line-break:after-white-space}:where([draggable="true"]){-webkit-user-drag:element}html,body{width:100%;height:100%}img{max-width:100%;height:auto}
+
+/**************************************************************
+* カスタムプロパティ
+**************************************************************/
+
+:root {
+  --base-background-color: #ffffff;
+  --base-color: #0b0d0c;
+  --base-inverted-color: #ffffff;
+  --accent-color-1: #F4A811;
+  --accent-color-2: #019dcc;
+  --accent-color-3: var(--base-color);
+  --accent-color-4: #53595E;
+  --flow-counter-bg-color: #2E303F;
+  --heading-font-family: "Zen Old Mincho", serif;
+  --alphabetic-font-family: "Cinzel", serif;
+  --base-font-size: 14; /* default mid-desktop (1360px) */
+  --base-bg: var(--base-background-color);
+  --form-control-bg: #ffffff;
+  --form-control-readonly-bg: #dfdfdf;
+  --line-color: #53595E;
+  --line-color-2: #CEC9C9;
+  --reservation-background-color-1:#ffd966;
+  --reservation-background-color-2:#d18f00;
+}
+
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  :root {
+    --base-font-size: 12;
+  }
+}
+@media all and (min-width: 640px) and (max-width: 767px) {
+  :root {
+    --base-font-size: 14;
+  }
+}
+@media all and (max-width: 639px) {
+  :root {
+    --base-font-size: 12;
+  }
+}
+@media all and (max-width: 374px) {
+  :root {
+    --base-font-size: 10;
+  }
+}
+
+
+/**************************************************************
+* フォームリセット
+**************************************************************/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #9c989f;
+  -webkit-text-fill-color: #000000;
+  -webkit-box-shadow: 0 0 0px 1000px  inset;
+  box-shadow: 0 0 0px 1000px #ffffff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill:read-only,
+textarea:-webkit-autofill:read-only,
+select:-webkit-autofill:read-only,
+input[type="text"]:not(#acceptance):read-only,
+input[type="tel"]:not(#acceptance):read-only,
+input[type="email"]:not(#acceptance):read-only,
+textarea:not(.privacy-textarea):read-only {
+  border: none;
+  -webkit-text-fill-color: #000000;
+  -webkit-box-shadow: 0 0 0px 1000px var(--form-control-readonly-bg) inset;
+  box-shadow: 0 0 0px 1000px var(--form-control-readonly-bg) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+/**************************************************************
+* 背景画像の指定
+**************************************************************/
+
+/** 共通
+************************************************************ */
+
+.nav-visual {
+  background-image: url(../images/common/nav_visual_bg.jpg);
+}
+
+/** swiper-*
+************************************************************ */
+.swiper-image-one {
+  background-image: url(../images/mv-slides/slide_1_img.jpg);
+}
+.swiper-image-two {
+  background-image: url(../images/mv-slides/slide_2_img.jpg);
+}
+.swiper-image-three {
+  background-image: url(../images/mv-slides/slide_3_img.jpg);
+}
+
+/** CONCEPT
+************************************************************ */
+.concept-visual[class*="--1"] .concept-visual__bg {
+  background-image: url(../images/concept/parallax_visual_1_bg.jpg);
+}
+
+.concept-visual[class*="--2"] .concept-visual__bg {
+  background-image: url(../images/concept/parallax_visual_2_bg.jpg);
+}
+
+/** ACCESS
+************************************************************ */
+.map-link::after {
+  background-image: url(../images/common/exterior_link_icn.svg);
+}
+
+/** RESERVATION
+************************************************************ */
+.reservation::after {
+  background-image: url(../images/common/noise_bg.png);
+}
+
+.tel-btn-icn {
+  background-image: url("../images/common/tel_icn.svg");
+}
+
+.line-btn-icn {
+  background-image: url("../images/common/line_brand_icon.png");
+}

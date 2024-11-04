@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+.g-nav::after,
+.g-footer::after,
+.concept::after {
+  background: linear-gradient(135deg, transparent 15%, rgb(54, 67, 126) 70%);
+}
+
+/**************************************************************
+* header
+**************************************************************/
+@media (min-width: 1024px){
+  .g-header {
+      width: 12%;
+  }
+  .g-header__logo > a img {
+    padding: 46px 15%;
+  }
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+  .g-header {
+      width: 15%;
+  }
+  .g-header__logo > a img {
+    padding: 25px 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .g-header {
+    width: 28%;
+  }
+  .g-header__logo > a img {
+    padding: 2rem;
+  }
+}
+
+
+/**************************************************************
+* mv
+**************************************************************/
+.swiper-image-one{
+  background-position: 65% center;
+}
+.swiper-image-two{
+  background-position: 35% center;
+}
+.swiper-image-three{
+  background-position: 50% center;
+}
+
+
+/**************************************************************
+* PRICE
+**************************************************************/
+.sub-menu .c-heading__alphabetic{
+  color: var(--base-background-color);
+}
+.menu-data {
+  display: grid;
+  margin-left: 13.75%;
+  gap: 5rem 5%;
+  grid-template-columns: repeat(2, 8% 30%);
+  justify-content:center;
+  align-items: center;
+}
+.menu-data dd {
+  padding-right: 55%;
+  text-align: left;
+}
+
+@media (min-width: 1024px){
+.sub-menu .c-heading__alphabetic.has-left-line > i {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .menu-data {
+    margin: 0 15%;
+    gap: 2rem 5%;
+    grid-template-columns: repeat(1, 30% 60%);
+  }
+  .menu-data dd {
+    padding-right: 0;
+    text-align: right;
+  }
+}
+
+
+/**************************************************************
+* contact
+**************************************************************/
+@media (min-width: 1024px){
+  .access .c-heading__alphabetic.has-right-line > i {
+    width: 65%;
+  }
+}
+
+
+/**************************************************************
+* contact
+**************************************************************/
+@media (max-width: 767px) {
+  .contact__lead {
+    text-align: left;
+  }
+}
+
+
+/**************************************************************
+* footer
+**************************************************************/
+.footer-logo__wrap > a > img {
+  width: 100px;
+}
